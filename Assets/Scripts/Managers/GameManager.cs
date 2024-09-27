@@ -38,14 +38,6 @@ public class GameManager : MonoBehaviour
         if (_cameraManager == null) { Debug.LogError("CameraManager is not assigned to GameManager in the inspector!"); }
         if (_levelManager == null) { Debug.LogError("LevelManager is not assigned to GameManager in the inspector!"); }
 
-    }   
-
-
-
-
-
-
-
-
+    }
 
 }
