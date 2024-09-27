@@ -2037,12 +2037,12 @@ PrefabInstance:
     - target: {fileID: 725711720319384260, guid: e778663d324e19a48ab9d91fcd9af8f9,
         type: 3}
       propertyPath: xSpeed
-      value: 2400
+      value: 240
       objectReference: {fileID: 0}
     - target: {fileID: 725711720319384260, guid: e778663d324e19a48ab9d91fcd9af8f9,
         type: 3}
       propertyPath: ySpeed
-      value: 2400
+      value: 240
       objectReference: {fileID: 0}
     - target: {fileID: 1308513348906308259, guid: e778663d324e19a48ab9d91fcd9af8f9,
         type: 3}
