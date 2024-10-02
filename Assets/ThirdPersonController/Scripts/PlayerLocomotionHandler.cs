@@ -14,7 +14,7 @@ public class PlayerLocomotionHandler : MonoBehaviour
     [SerializeField] public bool isSprinting;
 
     [Header("Debug Output (read only)")]
-    [SerializeField] private float playerVelocity;
+    public float playerVelocity;
     [SerializeField] private bool playerIsGrounded;
 
     [Header("Movement Speeds")]
@@ -27,7 +27,7 @@ public class PlayerLocomotionHandler : MonoBehaviour
 
     private Vector3 moveDirection;
     private Vector3 velocity;
-    private bool isJumping = false; // Track if player is currently jumping
+    public bool isJumping; // Track if player is currently jumping
  
 
     private void Awake()
@@ -41,7 +41,6 @@ public class PlayerLocomotionHandler : MonoBehaviour
         HandlePlayerMovement();
         HandlePlayerRotation();
         UpdatePlayerVelocityMagnitude();  // Debugging tool
-
     }
 
     private void HandlePlayerMovement()

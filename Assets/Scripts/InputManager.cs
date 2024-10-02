@@ -64,7 +64,7 @@ public class InputManager : MonoBehaviour
 
     private void HandleSprintingInput()
     {
-        if (Input.GetKey(KeyCode.LeftShift) && moveAmount > 0.5f)
+        if (Input.GetKey(KeyCode.LeftShift)) //&& moveAmount > 0.5f)
         {
             playerLocomotionHandler.isSprinting = true;
         }
