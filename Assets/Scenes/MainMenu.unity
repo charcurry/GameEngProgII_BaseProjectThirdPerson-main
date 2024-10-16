@@ -1859,6 +1859,26 @@ MonoBehaviour:
   animator: {fileID: 1484519129}
   _playerLocomotionHandler: {fileID: 1536193467}
   _characterController: {fileID: 0}
+--- !u!114 &1536193469
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1536193465}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 832b777a4f364894eb81839e77586b61, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cameraManager: {fileID: 858299880}
+  playerCam: {fileID: 0}
+  cubeFilter:
+    serializedVersion: 2
+    m_Bits: 128
+  groundFilter:
+    serializedVersion: 2
+    m_Bits: 1
 --- !u!1 &1583253799
 GameObject:
   m_ObjectHideFlags: 0
@@ -2594,6 +2614,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 1536193468}
+    - targetCorrespondingSourceObject: {fileID: 7034935583075056663, guid: e778663d324e19a48ab9d91fcd9af8f9,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1536193469}
     - targetCorrespondingSourceObject: {fileID: 4403862069076669138, guid: e778663d324e19a48ab9d91fcd9af8f9,
         type: 3}
       insertIndex: -1
