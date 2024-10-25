@@ -9,6 +9,9 @@ public class WeaponManager : MonoBehaviour
     [SerializeField] private LayerMask cubeFilter;
     [SerializeField] private LayerMask groundFilter;
 
+    public float distance;
+    public Color color;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -18,21 +21,20 @@ public class WeaponManager : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        float distance = 10;
-        if (Physics.Raycast(playerCam.transform.position, playerCam.transform.forward, out RaycastHit hit, 10, groundFilter.value))
-        {
-            distance = hit.distance;
-        }
+        //if (Physics.Raycast(playerCam.transform.position, playerCam.transform.forward, out RaycastHit hit, 10, groundFilter.value))
+        //{
+        //    distance = hit.distance;
+        //}
 
-        Debug.Log("Distance: " + distance);
+        //Debug.Log("Distance: " + distance);
 
         Vector3 camPos = playerCam.transform.position;
-        Debug.DrawLine(camPos, camPos + playerCam.transform.forward * 10, Color.red);
+        Debug.DrawLine(camPos, camPos + playerCam.transform.forward * 10, color);
         //Debug.Log(hit.collider.name);
 
         //if (hit.collider.TryGetComponent(out Renderer renderer))
         //{
-        //    renderer.material.color = Color.red;
+        //    renderer.material.color = color.red;
         //}
 
         RaycastHit[] hits = Physics.RaycastAll(playerCam.transform.position, playerCam.transform.forward, distance, cubeFilter.value);
@@ -42,6 +44,9 @@ public class WeaponManager : MonoBehaviour
             if (raycastHit.collider.TryGetComponent(out Renderer renderer))
             {
                 renderer.material.color = Color.red;
+                Debug.Log("Name: " + raycastHit.collider.name);
+                Debug.Log("Position: " + raycastHit.collider.transform.position);
+                Debug.Log("Distance: " + raycastHit.distance);
             }
         }
         Debug.Log("Hit " + hits.Length + " Cubes");
