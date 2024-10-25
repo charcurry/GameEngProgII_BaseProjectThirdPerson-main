@@ -49,6 +49,6 @@ public class WeaponManager : MonoBehaviour
                 Debug.Log("Distance: " + raycastHit.distance);
             }
         }
-        Debug.Log("Hit " + hits.Length + " Cubes");
+        //Debug.Log("Hit " + hits.Length + " Cubes");
     }
 }
