@@ -1881,6 +1881,26 @@ MonoBehaviour:
     m_Bits: 1
   distance: 10
   color: {r: 1, g: 0, b: 0, a: 0}
+--- !u!114 &1536193470
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1536193465}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a1d828f0cca3fc4e8152fd23733360b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cameraManager: {fileID: 858299880}
+  playerCamera: {fileID: 2384008851326326072}
+  maxRayDistance: 10
+  uIManager: {fileID: 1754438475}
+  pickups: {fileID: 1994675232}
+  pickupsCount: 0
+  target: {fileID: 0}
+  interactionPossible: 0
 --- !u!1 &1583253799
 GameObject:
   m_ObjectHideFlags: 0
@@ -2020,6 +2040,7 @@ MonoBehaviour:
   creditsMenuUI: {fileID: 1130613479}
   LoadingScreen: {fileID: 539075604}
   LevelCount: {fileID: 546856627}
+  GameplayMessage: {fileID: 2384008851326326071}
   loadingScreenCanvasGroup: {fileID: 539075606}
   loadingBar: {fileID: 1720702301}
   loadingText: {fileID: 759869028}
@@ -2201,6 +2222,18 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 2384008851326326069}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1994675232 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4247115239079984781, guid: e778663d324e19a48ab9d91fcd9af8f9,
+    type: 3}
+  m_PrefabInstance: {fileID: 2384008851326326069}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2121553631 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5807448802139555805, guid: e778663d324e19a48ab9d91fcd9af8f9,
@@ -2504,6 +2537,16 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5814305525793106959, guid: e778663d324e19a48ab9d91fcd9af8f9,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6430965463968047412, guid: e778663d324e19a48ab9d91fcd9af8f9,
+        type: 3}
+      propertyPath: m_Text
+      value: 'Pickups:'
+      objectReference: {fileID: 0}
     - target: {fileID: 6574228092536363616, guid: e778663d324e19a48ab9d91fcd9af8f9,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
@@ -2625,6 +2668,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 1536193469}
+    - targetCorrespondingSourceObject: {fileID: 7034935583075056663, guid: e778663d324e19a48ab9d91fcd9af8f9,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1536193470}
     - targetCorrespondingSourceObject: {fileID: 4403862069076669138, guid: e778663d324e19a48ab9d91fcd9af8f9,
         type: 3}
       insertIndex: -1
@@ -2641,6 +2688,24 @@ PrefabInstance:
 --- !u!4 &2384008851326326070 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3418709221229150666, guid: e778663d324e19a48ab9d91fcd9af8f9,
+    type: 3}
+  m_PrefabInstance: {fileID: 2384008851326326069}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2384008851326326071 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7080073777982698874, guid: e778663d324e19a48ab9d91fcd9af8f9,
+    type: 3}
+  m_PrefabInstance: {fileID: 2384008851326326069}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!20 &2384008851326326072 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 7852501862026054370, guid: e778663d324e19a48ab9d91fcd9af8f9,
     type: 3}
   m_PrefabInstance: {fileID: 2384008851326326069}
   m_PrefabAsset: {fileID: 0}

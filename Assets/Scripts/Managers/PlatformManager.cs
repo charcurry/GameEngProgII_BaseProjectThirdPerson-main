@@ -18,6 +18,12 @@ public class PlatformManager : MonoBehaviour
 
     private int currentWayPoint = 0;
     private float distance = 0.1f;
+    public GameManager gameManager;
+
+    public void Start()
+    {
+        gameManager = FindObjectOfType<GameManager>();
+    }
 
     // Platform
     private void Update()
@@ -32,6 +38,23 @@ public class PlatformManager : MonoBehaviour
         if (Vector3.Distance(transform.position, targetPosition) < distance)
         {
             currentWayPoint = (currentWayPoint + 1) % waypoints.Length;
+        }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            Debug.Log("triggered");
+            other.transform.parent = transform;
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            other.transform.parent = gameManager.transform;
         }
     }
 

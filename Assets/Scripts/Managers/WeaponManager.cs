@@ -29,7 +29,7 @@ public class WeaponManager : MonoBehaviour
         //Debug.Log("Distance: " + distance);
 
         Vector3 camPos = playerCam.transform.position;
-        Debug.DrawLine(camPos, camPos + playerCam.transform.forward * 10, color);
+        //Debug.DrawLine(camPos, camPos + playerCam.transform.forward * 10, color);
         //Debug.Log(hit.collider.name);
 
         //if (hit.collider.TryGetComponent(out Renderer renderer))
