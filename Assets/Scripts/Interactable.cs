@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Interactable : MonoBehaviour
 {
+    public bool wasInteracted = false;
+
     public enum InteractionType
     {
         Door,
@@ -15,6 +17,7 @@ public class Interactable : MonoBehaviour
 
     public void Activate()
     {
+        wasInteracted = true;
         Debug.Log(name + " was activated");
     }
 }

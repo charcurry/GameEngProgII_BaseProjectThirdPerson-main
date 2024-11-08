@@ -33,6 +33,7 @@ public class InteractionManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        interactionPossible = true;
         pickupsCount = 0;
         pickups.text = pickupsCount.ToString();
     }
@@ -41,14 +42,12 @@ public class InteractionManager : MonoBehaviour
     void Update()
     {
         pickups.text = pickupsCount.ToString();
-        if (target != null)
-        {
-            interactionPossible = true;
-        }
-        else
-        {
-            interactionPossible = false;
-        }
+    }
+
+    public IEnumerator ResetInteractibility()
+    {
+        yield return new WaitForSeconds(0.5f);
+        interactionPossible = true;
     }
 
     private void FixedUpdate()
@@ -58,7 +57,7 @@ public class InteractionManager : MonoBehaviour
         {
             if (hit.transform.gameObject.CompareTag("Interactable"))
             {
-                Debug.Log("Looking at " + hit.transform.gameObject.name);
+                //Debug.Log("Looking at " + hit.transform.gameObject.name);
                 target = hit.transform.gameObject;
                 targetInteractable = target.GetComponent<Interactable>();
             }
@@ -73,18 +72,23 @@ public class InteractionManager : MonoBehaviour
 
     public void Interact()
     {
-        switch(targetInteractable.type)
+        if (targetInteractable != null)
         {
-            case Interactable.InteractionType.Door:
-                target.SetActive(false);
-                break;
-            case Interactable.InteractionType.Button:
-                Debug.Log("Pressed " + target.name);
-                break;
-            case Interactable.InteractionType.Pickup:
-                target.SetActive(false);
-                pickupsCount++;
-                break;
+            switch (targetInteractable.type)
+            {
+                case Interactable.InteractionType.Door:
+                    target.SetActive(false);
+                    break;
+                case Interactable.InteractionType.Button:
+                    Debug.Log("Pressed " + target.name);
+                    break;
+                case Interactable.InteractionType.Pickup:
+                    target.SetActive(false);
+                    pickupsCount++;
+                    break;
+            }
+            interactionPossible = false;
+            StartCoroutine(ResetInteractibility());
         }
     }
 
