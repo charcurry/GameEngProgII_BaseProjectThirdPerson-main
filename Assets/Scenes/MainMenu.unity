@@ -1901,6 +1901,8 @@ MonoBehaviour:
   pickupsCount: 0
   target: {fileID: 0}
   interactionPossible: 0
+  pickup1: {fileID: 11400000, guid: 5fa55167918962648a17b3538f20fc45, type: 2}
+  pickup2: {fileID: 11400000, guid: 1f00e93816ba16c4b865787dc66d9813, type: 2}
 --- !u!1 &1583253799
 GameObject:
   m_ObjectHideFlags: 0

@@ -78,11 +78,14 @@ public class InteractionManager : MonoBehaviour
             {
                 case Interactable.InteractionType.Door:
                     target.SetActive(false);
+                    targetInteractable.Activate();
                     break;
                 case Interactable.InteractionType.Button:
+                    targetInteractable.Activate();
                     Debug.Log("Pressed " + target.name);
                     break;
                 case Interactable.InteractionType.Pickup:
+                    targetInteractable.Activate();
                     target.SetActive(false);
                     pickupsCount++;
                     break;

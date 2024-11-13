@@ -6,6 +6,8 @@ public class Interactable : MonoBehaviour
 {
     public bool wasInteracted = false;
 
+    [SerializeField] private Pickup pickup;
+
     public enum InteractionType
     {
         Door,
@@ -17,7 +19,15 @@ public class Interactable : MonoBehaviour
 
     public void Activate()
     {
+        if (type == InteractionType.Pickup)
+        {
+            Debug.Log(pickup.ShowName() + " was activated");
+        }
+        else
+        {
+            Debug.Log(name + " was activated");
+        }
         wasInteracted = true;
-        Debug.Log(name + " was activated");
+
     }
 }
