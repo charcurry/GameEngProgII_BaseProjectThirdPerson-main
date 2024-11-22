@@ -40,4 +40,12 @@ public class LocalizedTextComponent : MonoBehaviour
         textComponent.GetComponent<Text>();
         textComponent.text = localizedString.GetLocalizedString();
     }
+
+    public void ChangeLanguage(string lang)
+    {
+        var locale = LocalizationSettings.AvailableLocales.GetLocale(lang);
+        LocalizationSettings.SelectedLocale = locale;
+
+        UpdateText(locale);
+    }
 }

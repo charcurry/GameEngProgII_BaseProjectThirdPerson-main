@@ -34,6 +34,10 @@ MonoBehaviour:
     m_Localized: "CR\xC9DITS"
     m_Metadata:
       m_Items: []
+  - m_Id: 739390096662528
+    m_Localized: Titre du Jeu
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []
